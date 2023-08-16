@@ -33,3 +33,14 @@ for i in range(5):
  i =i+1
 print(agenda)
 
+4) Crie um programa que cadastre informações de várias pessoas (nome,
+idade e cpf) e depois coloque em um dicionário. Depois remova todas as
+pessoas menores de 18 anos do dicionário e coloque em outro dicionário.
+'''
+lista4 ={}
+for i in range(5):
+ lista4["cpf"] = input("digite seu cpf")
+ lista4["nome"] = input("digite seu nome")
+ lista4["tel"] = input("digite seu tel")
+ i =i+1
+print(lista4)
