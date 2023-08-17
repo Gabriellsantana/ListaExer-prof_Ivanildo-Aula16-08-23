@@ -86,3 +86,22 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+'''
+6) Escreva uma função que conta a quantidade de vogais em um texto e
+armazena tal quantidade em um dicionário, onde a chave é a vogal
+considerada.
+
+'''
+def cacavogais():
+ a = 0
+ j = 0
+ string = str(input("Digite um nome: "))
+ for a in string:
+  if a.lower() in string:
+   j += 1
+ print("A string digitada foi: {}".format(string))
+ print("A quantidade de vogais que possui é {}".format(j))
+
+cacavogais()
+
