@@ -105,3 +105,18 @@ def cacavogais():
 
 cacavogais()
 
+'''
+7) Escreva um programa que lê duas notas de vários alunos e armazena tais
+notas em um dicionário, onde a chave é o nome do aluno. A entrada de
+dados deve terminar quando for lida uma string vazia como nome.
+Escreva uma função que retorna a média do aluno, dado seu nome.
+'''
+nota= {}
+nome ={}
+while nome != "":
+ nome["Nome"] = input("Digite seu nome: ")
+ nota[nome["Nome"]] =input("digite sua primeira nota: ")
+ nota[nome["Nome"]] =input("digite sua segunda nota: ")
+ print(nota)
+
+
