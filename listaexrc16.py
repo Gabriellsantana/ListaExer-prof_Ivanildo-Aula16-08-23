@@ -119,4 +119,57 @@ while nome != "":
  nota[nome["Nome"]] =input("digite sua segunda nota: ")
  print(nota)
 
+'''
+8)Uma pista de Kart permite 10 voltas para cada um de 6 corredores.
+Escreva um programa que leia todos os tempos em segundos e os guarde
+em um dicionário, onde a chave é o nome do corredor. Ao final diga de
+quem foi a melhor volta da prova e em que volta; e ainda a classificação
+final em ordem (1o o campeão). O campeão é o que tem a menor média
+de tempos.
+
+'''
+
+def calcular_media_tempos(tempos):
+    return sum(tempos) / len(tempos)
+
+def main():
+    corredores = {
+        "Corredor 1": [],
+        "Corredor 2": [],
+        "Corredor 3": [],
+        "Corredor 4": [],
+        "Corredor 5": [],
+        "Corredor 6": []
+    }
+
+    for corredor in corredores:
+        print(f"Digite os tempos das 10 voltas para {corredor}:")
+        for volta in range(1, 11):
+            tempo = float(input(f"Volta {volta}: "))
+            corredores[corredor].append(tempo)
+
+    resultados = {}
+
+    for corredor, tempos in corredores.items():
+        media_tempo = calcular_media_tempos(tempos)
+        resultados[corredor] = media_tempo
+
+    classificacao_final = sorted(resultados.items(), key=lambda x: x[1])
+
+    print("\nClassificação Final:")
+    for posicao, (corredor, media_tempo) in enumerate(classificacao_final, start=1):
+        print(f"{posicao}º lugar: {corredor} - Média de Tempos: {media_tempo:.2f} segundos")
+
+    melhor_corredor = classificacao_final[0][0]
+    melhor_tempo = min(corredores[melhor_corredor])
+    volta_melhor_tempo = corredores[melhor_corredor].index(melhor_tempo) + 1
+
+    print(f"\nMelhor volta da prova:")
+    print(f"Corredor: {melhor_corredor}")
+    print(f"Volta: {volta_melhor_tempo}")
+    print(f"Tempo: {melhor_tempo:.2f} segundos")
+
+if __name__ == "__main__":
+    main()
+
 
